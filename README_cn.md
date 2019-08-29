@@ -9,56 +9,41 @@
  \______/ |_______/ |_______/  \______/ 
  
 ```
-# SDDS Specification
+# SDDS规范(beta)
+  
+快速构建二进制通讯解析程序的利器
+  
+[English document](https://github.com/byteferry/sdds)
+  
+## 简介
 
-## Introduction
-
-### What is SDDS?
+### 什么是SDDS?
     
-* Data Structure
-SDDS is the short word of "stream data dynamic structure".
+* 数据结构
+SDDS是"stream data dynamic structure"的缩写。
 * DSL
-SDDS is a DSL (domain-specific language) .  
-The schema of SDDS is human-readable  and machine and machine-readable.   
-* Parse Engine 
-SDDS is a parse engine coded according the SDDS Specification. You can rapid complete the developing of the binary communication program.  
+SDDS是一种DSL (domain-specific language) .  
+SDDS的schema不只是人可读，同时也是机器要理解的。   
+* 解析引擎 
+SDDS也指基于SDDS规范编写的解析引擎程序。用此，你可以快速完成你的二进制通讯的开发。
  
 
-## Install
+## 相关资源
 
-Via Composer
+- [SDDS规范](https://github.com/byteferry/sdds/blob/master/SDDS%20specification%201.0%20Beta.md)
+- [SDDS介绍](https://github.com/byteferry/sdds/blob/master/SDDS.pdf)
+- [SDDS Cheat Sheet ](https://github.com/byteferry/sdds/blob/master/SDDS%20Cheat%20Sheet.pdf)
 
-``` bash
-$ composer require byteferry/sdds_php:dev-master
-```
+## 开源程序
 
-## Usage
-
-Please read the document.
-    
-    
-## Features
-
- 
-    
-## Testing
-
-``` bash
-$ composer test
-```
-
-## Contributing
-    
-Please see [CONTRIBUTING](CONTRIBUTING.md) and [CONDUCT](CONDUCT.md) for details.
-    
-## Security
-    
-If you discover any security related issues, please create an issue in the issue tracker.
-    
-## Credits
-
-- [ByteFerry][link-author]
-- [All Contributors][link-contributors]
+- [SDDS JAVA]
+- [SDDS C++]
+- [SDDS PHP](https://github.com/byteferry/sdds_php)
+- [SDDS PYTHON]
+- [SDDS GOLANG]
+- [SDDS RUBY]
+- [SDDS JAVASCRIPT]
+- [SDDS C#]
 
 ## License
    
