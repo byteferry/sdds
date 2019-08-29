@@ -10,7 +10,11 @@
  
 ```
 # SDDS Specification
-
+  
+ A tool for quickly building binary communication parsers
+  
+[中文文档](https://github.com/byteferry/sdds/blob/master/README_cn.md)
+  
 ## Introduction
 
 ### What is SDDS?
@@ -23,44 +27,25 @@ The schema of SDDS is human-readable  and machine and machine-readable.
 * Parse Engine 
 SDDS is a parse engine coded according the SDDS Specification. You can rapid complete the developing of the binary communication program.  
  
+## Resource
 
-## Install
+- [SDDS Specification](https://github.com/byteferry/sdds/blob/master/SDDS%20specification%201.0%20Beta_en.md)
+- [SDDS Introduction](https://github.com/byteferry/sdds/blob/master/SDDS_en.pdf)
+- [SDDS Cheat Sheet ](https://github.com/byteferry/sdds/blob/master/SDDS%20Cheat%20Sheet_en.pdf)
 
-Via Composer
+## Open Source
 
-``` bash
-$ composer require byteferry/sdds_php:dev-master
-```
-
-## Usage
-
-Please read the document.
-    
-    
-## Features
-
- 
-    
-## Testing
-
-``` bash
-$ composer test
-```
-
-## Contributing
-    
-Please see [CONTRIBUTING](CONTRIBUTING.md) and [CONDUCT](CONDUCT.md) for details.
-    
-## Security
-    
-If you discover any security related issues, please create an issue in the issue tracker.
-    
-## Credits
-
-- [ByteFerry][link-author]
-- [All Contributors][link-contributors]
+- [SDDS JAVA]
+- [SDDS C++]
+- [SDDS PHP](https://github.com/byteferry/sdds_php)
+- [SDDS PYTHON]
+- [SDDS GOLANG]
+- [SDDS RUBY]
+- [SDDS JAVASCRIPT]
+- [SDDS C#]
 
 ## License
    
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
+   
     
