@@ -1,94 +1,112 @@
-# Sdds Specification 1.0 beta
-## Sdds¹æ·¶1.0 beta
+# SDDS Specification 1.0 beta
+## SDDS¹æ·¶1.0 beta
     
-Copyright£º Sdds project 2018
+Copyright£º SDDS project 2018
     
 License£º GNU GPL
     
 ### ¸ÅÒª£º
     
-#### Ê²Ã´ÊÇsdds£¿
-sddsÊÇstream data dynamic structureµÄËõÐ´£¬¼´Á÷Êý¾Ý¶¯Ì¬½á¹¹¡£sddsÊÇÒ»ÖÖdsl(domain-specific language)¡£Ê¹ÓÃ³ÌÐòÔ±¿É¶ÁÇÒ³ÌÐò¿ÉÀí½âµÄ·½Ê½ÓÃÀ´ÃèÊö¶þ½øÖÆÁ÷Êý¾ÝµÄ½á¹¹£¬´Ó¶øÊµÏÖÓë¹æ·¶³ÌÐò¶Ô¶þ½øÖÆÁ÷Êý¾ÝµÄ¶ÁÐ´¡£±¾ÎÄ½²ÊösddsµÄ½á¹¹£¬ÒÔ¼°sddsÒýÇæ³ÌÐòÐèÒªÖ§³ÖµÄ¹¦ÄÜ¡£
+#### Ê²Ã´ÊÇSDDS£¿
+SDDSÊÇstream data dynamic structureµÄËõÐ´£¬¼´Á÷Êý¾Ý¶¯Ì¬½á¹¹¡£SDDSÊÇÒ»ÖÖdsl(domain-specific language)¡£Ê¹ÓÃ³ÌÐòÔ±¿É¶ÁÇÒ³ÌÐò¿ÉÀí½âµÄ·½Ê½ÓÃÀ´ÃèÊö¶þ½øÖÆÁ÷Êý¾ÝµÄ½á¹¹£¬´Ó¶øÊµÏÖÓë¹æ·¶³ÌÐò¶Ô¶þ½øÖÆÁ÷Êý¾ÝµÄ¶ÁÐ´¡£±¾ÎÄ½²ÊöSDDSµÄ½á¹¹£¬ÒÔ¼°SDDSÒýÇæ³ÌÐòÐèÒªÖ§³ÖµÄ¹¦ÄÜ¡£
     
-#### ÎªÊ²Ã´ÒªÓÃsdds£¿
+#### ÎªÊ²Ã´ÒªÓÃSDDS£¿
 ÔÚ»ùÓÚÊý¾ÝÁ÷µÄÍ¨Ñ¶ÖÐ£¬»òÕßÆäËüËùÓÐÉæ¼°¶þ½øÖÆÊý¾ÝÁ÷µÄ´¦ÀíÖÐ£¬µ½Ä¿Ç°ÎªÖ¹£¬ÎÒÃÇÃ»ÓÐÒ»¸öÓÐÐ§µÄ´¦Àí·½Ê½À´½øÐÐÊý¾ÝµÄ¶ÁÐ´£¬Í¨³£Çé¿öÏÂ£¬ÎÒÃÇÒªÕë¶Ô²»Í¬µÄ¶þ½øÖÆÊý¾ÝÁ÷µÄ´¦ÀíÀ´±àÐ´²»Í¬µÄ³ÌÐò¡£
     
-sddsµÄÄ¿±êÔòÊÇ£¬Ê¹ÓÃÍ³Ò»µÄsdds»ù´¡±àÂëÓë½âÂëÒýÇæ³ÌÐò£¬Ö»ÒªÍ¨¹ý¼«ÉÙµÄ²¿·ÖÀ©Õ¹£¬¾ÍÄÜ¿ìËÙÊµÏÖ¶þ½øÖÆÊý¾ÝÁ÷±àÂëÓë½âÂë¡£
+SDDSµÄÄ¿±êÔòÊÇ£¬Ê¹ÓÃÍ³Ò»µÄSDDS»ù´¡±àÂëÓë½âÂëÒýÇæ³ÌÐò£¬Ö»ÒªÍ¨¹ý¼«ÉÙµÄ²¿·ÖÀ©Õ¹£¬¾ÍÄÜ¿ìËÙÊµÏÖ¶þ½øÖÆÊý¾ÝÁ÷±àÂëÓë½âÂë¡£
     
-sdds×¨ÃÅÕë¶Ô¶þ½øÖÆÊý¾ÝÁ÷µÄÓ¦ÓÃ²ãÍøÂçÍ¨Ñ¶Ð­ÒéµÄ±àÂëÓë½âÂë£¬Á¦Çó¼ò»¯Í¨Ñ¶¿ª·¢¡£
-sddsµÄÄ¿±êÊÇ£º¼òµ¥£¬Ò×ÓÃ¡¢¿ìËÙ¡¢¸ßÐ§¡£
+SDDS×¨ÃÅÕë¶Ô¶þ½øÖÆÊý¾ÝÁ÷µÄÓ¦ÓÃ²ãÍøÂçÍ¨Ñ¶Ð­ÒéµÄ±àÂëÓë½âÂë£¬Á¦Çó¼ò»¯Í¨Ñ¶¿ª·¢¡£
+SDDSµÄÄ¿±êÊÇ£º¼òµ¥£¬Ò×ÓÃ¡¢¿ìËÙ¡¢¸ßÐ§¡£
 
-### sddsÎÄµµ¶¨Òå¸ñÊ½£º
-sddsµÄ¶¨Òå£¬ÎÒÃÇ³ÆÆäÎªsdds schema¡£sdds schemaÊÇÊý¾ÝÁ÷µÄ±àÂëÓë½âÂëÖ¸ÁîµÄÎÄ¼þ¡£ÕâÐ©Ö¸ÁîÍ¨¹ýsddsÒýÇæÀ´½âÎöÊý¾Ý¡£Ò²¾ÍÊÇËµ£¬ËüÊÇ»ùÓÚÍ¨Ñ¶Ð­Òé»òÎÄµµÊý¾Ý¸ñÊ½µÄ¶¯Ì¬Êý¾Ý½á¹¹¡£
+### SDDSÎÄµµ¶¨Òå¸ñÊ½£º
+SDDSµÄ¶¨Òå£¬ÎÒÃÇ³ÆÆäÎªSDDS schema¡£SDDS schemaÊÇÊý¾ÝÁ÷µÄ±àÂëÓë½âÂëÖ¸ÁîµÄÎÄ¼þ¡£ÕâÐ©Ö¸ÁîÍ¨¹ýSDDSÒýÇæÀ´½âÎöÊý¾Ý¡£Ò²¾ÍÊÇËµ£¬ËüÊÇ»ùÓÚÍ¨Ñ¶Ð­Òé»òÎÄµµÊý¾Ý¸ñÊ½µÄ¶¯Ì¬Êý¾Ý½á¹¹¡£
     
-sddsµÄschema¶¨ÒåÊ¹ÓÃjson¸ñÊ½£¬ÒÔ·½±ãÔÚ±àÐ´schemaÊ±¿É½èÖúÓÚÏà¹ØIDE½øÐÐÓï·¨¼ì²é¡£
+SDDSµÄschema¶¨ÒåÊ¹ÓÃjson¸ñÊ½£¬ÒÔ·½±ãÔÚ±àÐ´schemaÊ±¿É½èÖúÓÚÏà¹ØIDE½øÐÐÓï·¨¼ì²é¡£
     
-sdds schemaÖÐ¹Ø¼ü×ÖÊ¹ÓÃÍêÈ«Ð¡Ð´£¬²¢ÇÒ£¬µ¥´Ê¼äÁ¬½Ó²ÉÓÃÏÂ»®Ïß¡£
+SDDS schemaÖÐ¹Ø¼ü×ÖÊ¹ÓÃÍêÈ«Ð¡Ð´£¬²¢ÇÒ£¬µ¥´Ê¼äÁ¬½Ó²ÉÓÃÏÂ»®Ïß¡£
    
-### sddsµÄÊý¾ÝÀàÐÍ
+### SDDSµÄÊý¾ÝÀàÐÍ
     
 #### »ù±¾Êý¾ÝÀàÐÍ£º
-sddsÄ¿Ç°Ö§³ÖÒÔÏÂ»ù±¾Êý¾ÝÀàÐÍ£º
+SDDSÄ¿Ç°Ö§³ÖÒÔÏÂ»ù±¾Êý¾ÝÀàÐÍ£º
     
    (1)ÕûÊýÀàÐÍ£º
        
-int8£ºÕûÊýÀàÐÍ£¬1¸ö×Ö½Ú£¨8Î»£©³¤¶ÈµÄÕûÊý¡£
-int16£ºÕûÊýÀàÐÍ£¬2¸ö×Ö½Ú£¨16Î»£©³¤¶ÈµÄÕûÊý¡£
-int24£ºÕûÊýÀàÐÍ£¬3¸ö×Ö½Ú£¨24Î»£©³¤¶ÈµÄÕûÊý¡£
-int32£ºÕûÊýÀàÐÍ£¬4¸ö×Ö½Ú£¨32Î»£©³¤¶ÈµÄÕûÊý¡£
-int64£ºÕûÊýÀàÐÍ£¬8¸ö×Ö½Ú£¨64Î»£©³¤¶ÈµÄÕûÊý¡£
-    
+- int8£ºÕûÊýÀàÐÍ£¬1¸ö×Ö½Ú£¨8Î»£©³¤¶ÈµÄÕûÊý¡£
+  
+- int16£ºÕûÊýÀàÐÍ£¬2¸ö×Ö½Ú£¨16Î»£©³¤¶ÈµÄÕûÊý¡£
+  
+- int24£ºÕûÊýÀàÐÍ£¬3¸ö×Ö½Ú£¨24Î»£©³¤¶ÈµÄÕûÊý¡£
+  
+- int32£ºÕûÊýÀàÐÍ£¬4¸ö×Ö½Ú£¨32Î»£©³¤¶ÈµÄÕûÊý¡£
+  
+- int64£ºÕûÊýÀàÐÍ£¬8¸ö×Ö½Ú£¨64Î»£©³¤¶ÈµÄÕûÊý¡£
+      
 ËùÓÐÒÔÉÏÀàÐÍ¾ùÖ§³ÖÓÐ·ûºÅ(signed)ÓëÎÞ·ûºÅ(unsigned)¡£ÇÒÄ¬ÈÏÊÇÓÐ·ûºÅ(signed)£¬Èç¹ûÎÞ·ûºÅ£¬Ôò unsignedÊôÐÔ£¨attribute£©ÒªÖ¸¶¨Îªtrue.
     
    (2)ÕûÊýÀàÐÍ±ðÃû 
       
-bool£ºint8±£´æµÄ²¼¶ûÀàÐÍ£¬ÔÚ×Ö½Ú×Ö¶ÎÖÐÊÇ1¸ö×Ö½Ú£¬ÔÚÎ»×Ö¶ÎÖÐÊÇ1Î»¡£ÊýÖµÎª0ºÍ1¡£
-char£ºint8ÀàÐÍµÄ±ðÃû¡£
-byte£ºint8ÀàÐÍµÄ±ðÃû¡£
-short£ºint16ÀàÐÍµÄ±ðÃû¡£
-word£ºint16ÀàÐÍµÄ±ðÃû¡£
-dword£º int32ÀàÐÍµÄ±ðÃû¡£
-int£º int32ÀàÐÍµÄ±ðÃû¡£
-long£º int64ÀàÐÍµÄ±ðÃû¡£
+- bool£ºint8±£´æµÄ²¼¶ûÀàÐÍ£¬ÔÚ×Ö½Ú×Ö¶ÎÖÐÊÇ1¸ö×Ö½Ú£¬ÔÚÎ»×Ö¶ÎÖÐÊÇ1Î»¡£ÊýÖµÎª0ºÍ1¡£
+  
+- char£ºint8ÀàÐÍµÄ±ðÃû¡£
+  
+- byte£ºint8ÀàÐÍµÄ±ðÃû¡£
+  
+- short£ºint16ÀàÐÍµÄ±ðÃû¡£
+  
+- word£ºint16ÀàÐÍµÄ±ðÃû¡£
+  
+- dword£º int32ÀàÐÍµÄ±ðÃû¡£
+  
+- int£º int32ÀàÐÍµÄ±ðÃû¡£
+  
+- long£º int64ÀàÐÍµÄ±ðÃû¡£
     
     
    (3)¸¡µãÊýÀàÐÍ£º
     
-float32£º ·ûµãÊý£¬4¸ö×Ö½Ú£¨32Î»£©³¤¶ÈµÄ·ûµãÊý¡£
-float64£º ·ûµãÊý£¬8¸ö×Ö½Ú£¨64Î»£©³¤¶ÈµÄ·ûµãÊý¡£
+- float32£º ·ûµãÊý£¬4¸ö×Ö½Ú£¨32Î»£©³¤¶ÈµÄ·ûµãÊý¡£
+  
+- float64£º ·ûµãÊý£¬8¸ö×Ö½Ú£¨64Î»£©³¤¶ÈµÄ·ûµãÊý¡£
 
    (4)¸¡µãÊýÀàÐÍ±ðÃû£º
    
-single£º float32ÀàÐÍµÄ±ðÃû¡£
-double£º float64ÀàÐÍµÄ±ðÃû¡£
+- single£º float32ÀàÐÍµÄ±ðÃû¡£
+  
+- double£º float64ÀàÐÍµÄ±ðÃû¡£
 
    (5)ÆäËü»ù±¾ÀàÐÍ£º
    
-bytes£º×Ö½ÚÀàÐÍ£¬¶ÁÈ¡Ö¸¶¨³¤¶È×Ö½ÚµÄ×Ö½Ú
-bit£ºÎ»ÀàÐÍ£¬
-bits£º¶ÁÈ¡Ö¸¶¨³¤¶ÈµÄÎ»¡£
-string£º ¶ÁÈ¡Ö¸¶¨³¤¶È£¬Ö¸¶¨charsetµÄ×Ö·û´®¡£
-bcd8421£º»ùÓÚ8421Ëã·¨µÄbcdÂë¡£
-hex£º 16½øÖÆ×Ö·û´®ÀàÐÍ
+- bytes£º×Ö½ÚÀàÐÍ£¬¶ÁÈ¡Ö¸¶¨³¤¶È×Ö½ÚµÄ×Ö½Ú
+  
+- bit£ºÎ»ÀàÐÍ£¬
+  
+- bits£º¶ÁÈ¡Ö¸¶¨³¤¶ÈµÄÎ»¡£
+  
+- string£º ¶ÁÈ¡Ö¸¶¨³¤¶È£¬Ö¸¶¨charsetµÄ×Ö·û´®¡£
+  
+- bcd8421£º»ùÓÚ8421Ëã·¨µÄbcdÂë¡£
+  
+- hex£º 16½øÖÆ×Ö·û´®ÀàÐÍ
     
 ×¢£ºËùÓÐÊýÖµÀàÐÍ¾ùÓÐendiannessÇø·Ö¡£¿ÉÍ¨¹ýoptions½ÚµãÖ¸¶¨¡£
      
-sddsÒýÇæ²»½öÒªÖ§³Ö¶Á(read)£¬Í¬Ê±Ò²ÒªÖ§³ÖÐ´(write),²åÈë(insert),Ìæ»»(replace£©¡£
+SDDSÒýÇæ²»½öÒªÖ§³Ö¶Á(read)£¬Í¬Ê±Ò²ÒªÖ§³ÖÐ´(write),²åÈë(insert),Ìæ»»(replace£©¡£
     
-sdds½ÚµãÖÐ£¬Í¨¹ýÒÔÏÂÁ½¸öattributesÖ¸¶¨Êý¾ÝÀàÐÍ£ºdata_typeºÍunsinged¡£
+SDDS½ÚµãÖÐ£¬Í¨¹ýÒÔÏÂÁ½¸öattributesÖ¸¶¨Êý¾ÝÀàÐÍ£ºdata_typeºÍunsinged¡£
     
 endiannessÔòÔÚoptions½ÚµãÖ¸¶¨¡£Èç¹ûÓÐ¸ö±ð½ÚµãÓëÊµ¼ÊµÄendianness²»Ò»ÖÂ£¬ÔòÐèÒªÍ¨¹ý×Ô¶¨Òåº¯ÊýÊµÏÖ¡£
 
 #### Êý¾ÝÀàÐÍµÄÀ©Õ¹
     
-³ýÁËÉÏÊö»ù±¾Êý¾ÝÀàÐÍÒÔÍâ£¬¶ÔÓÚ²»Ö§³ÖµÄÊý¾ÝÀàÐÍ£¬sddsÒýÇæÖ§³ÖÊý¾ÝÀàÐÍµÄÀ©Õ¹¡£À©Õ¹·½Ê½ÓÐ£ºÍ¨¹ý»ù±¾Êý¾ÝÀàÐÍ×éºÏµÄ×Ô¶¨ÒåÀàÐÍ£¬²Î¼ûAttribute byte_fieldsºÍbit_fields.
+³ýÁËÉÏÊö»ù±¾Êý¾ÝÀàÐÍÒÔÍâ£¬¶ÔÓÚ²»Ö§³ÖµÄÊý¾ÝÀàÐÍ£¬SDDSÒýÇæÖ§³ÖÊý¾ÝÀàÐÍµÄÀ©Õ¹¡£À©Õ¹·½Ê½ÓÐ£ºÍ¨¹ý»ù±¾Êý¾ÝÀàÐÍ×éºÏµÄ×Ô¶¨ÒåÀàÐÍ£¬²Î¼ûAttribute byte_fieldsºÍbit_fields.
     
-Ò²¿ÉÒÔÍ¨¹ý»ù±¾ÀàÐÍbytes¶Á³ö×Ö½Ú£¬È»ºóÔÙÍ¨¹ýformat,formula,after_changeµÈÊôÐÔÖ¸¶¨¶ÔÓ¦µÄµÄÀ©Õ¹º¯ÊýÊµÏÖ¡£
+Ò²¿ÉÒÔÍ¨¹ý»ù±¾ÀàÐÍbytes¶Á³ö×Ö½Ú£¬È»ºóÔÙÍ¨¹ýformat,formula,after_actionµÈÊôÐÔÖ¸¶¨¶ÔÓ¦µÄµÄÀ©Õ¹º¯ÊýÊµÏÖ¡£
 
-### sdds schema½Úµã½á¹¹¡£
+### SDDS schema½Úµã½á¹¹¡£
 
 #### Schema½á¹¹
-ËµÃ÷£¬ÈÎÒ»sdds schema ¾ù°üÀ¨ÒÔÉÏÈý¸ö·ÖÖ§½Úµã£º¼´¸ñÊ½ÈçÏÂ£º
+ËµÃ÷£¬ÈÎÒ»SDDS schema ¾ù°üÀ¨ÒÔÉÏÈý¸ö·ÖÖ§½Úµã£º¼´¸ñÊ½ÈçÏÂ£º
 ```
 {
 "meta"£º{},
@@ -97,10 +115,12 @@ endiannessÔòÔÚoptions½ÚµãÖ¸¶¨¡£Èç¹ûÓÐ¸ö±ð½ÚµãÓëÊµ¼ÊµÄendianness²»Ò»ÖÂ£¬ÔòÐèÒªÍ¨¹
 }
 ```
 ÆäÖÐ£º
-meta£ºÓÃÀ´ËµÃ÷±¾sdds schemaÏà¹ØÐÅÏ¢µÄÔªÊý¾Ý¡£sddsÒýÇæ²¢²»´¦Àí´Ë½Úµã¡£
-options£ºÎªsddsÒýÇæÅäÖÃµÄÈ«¾Ö³ÌÐòÔËÐÐ²ÎÊý
-sdds£ºsdds schemaÖ÷Ìå¡£
-
+meta£ºÓÃÀ´ËµÃ÷±¾SDDS schemaÏà¹ØÐÅÏ¢µÄÔªÊý¾Ý¡£SDDSÒýÇæ²¢²»´¦Àí´Ë½Úµã¡£
+  
+options£ºÎªSDDSÒýÇæÅäÖÃµÄÈ«¾Ö³ÌÐòÔËÐÐ²ÎÊý¡£
+  
+sdds£ºSDDS schemaÖ÷Ìå¡£
+  
 #### meta½Úµã½á¹¹
      
 ÓÉÓÚmeta½Úµã½ö½öÊÇÒ»¸öÐÅÏ¢(information)½Úµã£¬³ÌÐò²»»áÓÃËüÀ´´¦ÀíÊý¾Ý£¬ËùÒÔ£¬meta½ÚµãµÄ×Ö¶Î¿ÉÒÔËæÒâÔö¼Ó»ò¼õÉÙ¡£ËùÒÔ£¬ÒÔÏÂ½öÎªÍÆ¼ö¹Ø¼ü×Ö¡£
@@ -158,10 +178,14 @@ top_node£ºstring£¬Ö¸¶¨³ÌÐò´ÓÄÄ¸ö½Úµã¿ªÊ¼½âÎö¡£Í¨³££¬Èç¹ûÎ´Ö¸¶¨£¬³ÌÐò»á´Ódecode»ò
 ```
     
 Í¨³£sddsÓÐÁ½¸ö·ÖÖ§½Úµã£º
+  
 decode£ºjson£¬Ö¸¶¨´Ë½ÚµãÎª½âÂëÓÃµÄ½ÚµãÁÐ±íµÄ·ÖÖ§£»µ«Èç¹ûÊÇ´¿½âÂë»ò±àÂë£¬¼´Ö»ÓÐµ¥Ò»¹¦ÄÜ£¬Ò²¿ÉÒÔ²»ÒªÕâÒ»²ã·ÖÖ§¡£
+  
 encode£ºjson£¬Ö¸¶¨´Ë½ÚµãÎª±àÂëÓÃµÄ½ÚµãÁÐ±íµÄ·ÖÖ§£»µ«Èç¹ûÊÇ´¿½âÂë»ò±àÂë£¬¼´Ö»ÓÐµ¥Ò»¹¦ÄÜ£¬Ò²¿ÉÒÔ²»ÒªÕâÒ»²ã·ÖÖ§¡£
 ÏÂÎÄÖÐ£¬ÎÒÃÇÄ¬ÈÏdecode¡¢encode·ÖÖ§´æÔÚ¡£
+  
 ±¾ÖÊÉÏ£¬decode¡¢encode·ÖÖ§ÖÐµÄ×Ó½Úµã²ÅÊÇÕæÕýµÄSDDS¶ÁÐ´Ö¸Áî¡£
+  
 ÔÚdecode¡¢encode·ÖÖ§ÖÐ£¬Í¨³£ÓÐÒ»¸ö½ÚµãÊÇ¶¥²ã½Úµã¡£¼´´Ë½ÚµãÊÇÃèÊöÕû¸öÊý¾Ý°ü½á¹¹µÄ½Úµã¡£ÉÏÀýÖÐmessageÎª¶¥²ã½Úµã¡£Ä¬ÈÏÇé¿öÏÂ£¬message»òdocumentÎª³ÌÐò¿ªÊ¼½âÎöµÄµÚÒ»¸ö½Úµã¡£Ò²¾ÍÊÇ×î´óµÄ½Úµã¡£µ±È»£¬Äã¿ÉÒÔÍ¨¹ýÔÚoptions½ÚµãÖÐµÄtop_nodeµÈÖ¸¶¨Îªdocument£¬»òÆäËüÃû³ÆµÄ½Úµã¡£ÍÆ¼öÊ¹ÓÃmessage»òdocument¡£
     
 #### decode¡¢encode·ÖÖ§ÖÐ×Ó½ÚµãµÄ½á¹¹
@@ -228,7 +252,7 @@ encode£ºjson£¬Ö¸¶¨´Ë½ÚµãÎª±àÂëÓÃµÄ½ÚµãÁÐ±íµÄ·ÖÖ§£»µ«Èç¹ûÊÇ´¿½âÂë»ò±àÂë£¬¼´Ö»ÓÐµ¥
     
 £¨3£©´øÓÐ·ÖÖ§µÄ½Úµã£º
     
-´øÓÐ·ÖÖ§µÄ½Úµã£¬ÈçÍ¬SDDS½ÚµãÒ»Ñù£¬´øÓÐ·ÖÖ§¡£ÕâÑùµÄ·ÖÖ§Ö»ÓÐÁ½Àà£¬·ÖÀàÊÇ×Ö½Ú×Ö¶Î·ÖÖ§ºÍÎ»×Ö¶Î·ÖÖ§¡£
+´øÓÐ·ÖÖ§µÄ½Úµã£¬ÈçÍ¬sdds½ÚµãÒ»Ñù£¬´øÓÐ·ÖÖ§¡£ÕâÑùµÄ·ÖÖ§Ö»ÓÐÁ½Àà£¬·ÖÀàÊÇ×Ö½Ú×Ö¶Î·ÖÖ§ºÍÎ»×Ö¶Î·ÖÖ§¡£
 ·Ö±ðÈçÏÂ£º
     
 ```    
@@ -251,7 +275,7 @@ encode£ºjson£¬Ö¸¶¨´Ë½ÚµãÎª±àÂëÓÃµÄ½ÚµãÁÐ±íµÄ·ÖÖ§£»µ«Èç¹ûÊÇ´¿½âÂë»ò±àÂë£¬¼´Ö»ÓÐµ¥
 ```
 Óë»ù±¾Êý¾ÝÀàÐÍ½Úµã²»Í¬£¬½ÚµãÖÐÐí¶àÊôÐÔÊÇ²»ÐèÒªµÄ¡£Í¬Ê±£¬byte_fieldsºÍbit_fieldsÖÐÒ²±ØÐëÒªÓÐ·ÖÖ§½Úµã¡£²¢ÇÒbyte_fields·ÖÖ§¾ù¿ÉÒÔÊÇÈÎÒ»ÖÖÀàÐÍµÄ½Úµã¡£¶øbit_fieldsÖÐµÄ·ÖÖ§£¬Ö»ÄÜÊÇ»ù±¾Êý¾ÝÀàÐÍ½Úµã¡£
     
-Í¨³£Çé¿öÏÂ£¬¶¥²ã½Úµã±ØÐëÊÇ´øÓÐbyte_fields·ÖÖ§µÄ½Úµã¡£ÒòÎª£¬sddsÒýÇæ²»»á°´Ë³ÐòÖ÷¶¯±éÀúsddsµÄ·ÖÖ§£¬¶øÊÇÓÉ¶¥²ã½ÚµãÖ¸¶¨Á÷³Ì½øÐÐ¡£
+Í¨³£Çé¿öÏÂ£¬¶¥²ã½Úµã±ØÐëÊÇ´øÓÐbyte_fields·ÖÖ§µÄ½Úµã¡£ÒòÎª£¬SDDSÒýÇæ²»»á°´Ë³ÐòÖ÷¶¯±éÀúsddsµÄ·ÖÖ§£¬¶øÊÇÓÉ¶¥²ã½ÚµãÖ¸¶¨Á÷³Ì½øÐÐ¡£
     
 ÀýÈç£¬Ò»¸öÏûÏ¢½ÚµãµÄ½á¹¹¿ÉÄÜ»áÊÇÕâÑùµÄ£º
     
@@ -338,11 +362,11 @@ encode£ºjson£¬Ö¸¶¨´Ë½ÚµãÎª±àÂëÓÃµÄ½ÚµãÁÐ±íµÄ·ÖÖ§£»µ«Èç¹ûÊÇ´¿½âÂë»ò±àÂë£¬¼´Ö»ÓÐµ¥
 
 ### ²ÎÊý´«µÝ
     
-sdds schemaÖÐ²ÉÓÃÒÔÏÂÈýÖÖ·½Ê½½øÐÐ²ÎÊý´«µÝ¡£ 
+SDDS schemaÖÐ²ÉÓÃÒÔÏÂÈýÖÖ·½Ê½½øÐÐ²ÎÊý´«µÝ¡£ 
     
 (1)ÊýÖµ´«µÝÑ¡ÔñÆ÷
     
-"#" idÑ¡ÔñÆ÷£¬Ö¸¶¨¶ÁÈ¡¶ÔÓ¦idµÄÖµ¡£×¢Òâ£¬idÔÚÍ¬Ò»sddsÎÄ¼þÖÐÓ¦µ±Î¨Ò»¡£Èç¹û²»Î¨Ò»£¬ÔòÓ¦µ±Ê¹ÓÃÆäËüµÄÑ¡ÔñÆ÷¡£Ê¾Àý£º"value"£º"#body_length",ÔòÊÇÖ¸ÆäÖµÊÇ¶ÁÈ¡idÎªbody_lengthµÄÖµ¡£µ±Ç°½ÚµãÒ»¶¨ÊÇbody_lengthºóµÄ½Úµã¡£Òò´Ë£¬Ò»¶¨ÓÐÁíÍâÒ»¸ö½Úµã£¬ÊôÐÔÖÐÓÐ£º"id"£º"body_length"¡£
+"#" idÑ¡ÔñÆ÷£¬Ö¸¶¨¶ÁÈ¡¶ÔÓ¦idµÄÖµ¡£×¢Òâ£¬idÔÚÍ¬Ò»SDDSÎÄ¼þÖÐÓ¦µ±Î¨Ò»¡£Èç¹û²»Î¨Ò»£¬ÔòÓ¦µ±Ê¹ÓÃÆäËüµÄÑ¡ÔñÆ÷¡£Ê¾Àý£º"value"£º"#body_length",ÔòÊÇÖ¸ÆäÖµÊÇ¶ÁÈ¡idÎªbody_lengthµÄÖµ¡£µ±Ç°½ÚµãÒ»¶¨ÊÇbody_lengthºóµÄ½Úµã¡£Òò´Ë£¬Ò»¶¨ÓÐÁíÍâÒ»¸ö½Úµã£¬ÊôÐÔÖÐÓÐ£º"id"£º"body_length"¡£
     
 "@"£º pathÑ¡ÔñÆ÷,Ö¸¶¨Í¨¹ýÂ·¾¶¶ÁÈ¡Ä³½ÚµãµÄÖµ¡£×¢Òâ£¬Â·¾¶ÊÇÏÈÏòÉÏËÑË÷£¬ËÑË÷µ½ÏàÍ¬½Úµãºó£¬ÔÙÏòÏÂËÑË÷¡£ËùÒÔ£¬Â·¾¶Ö»ÒªÖ¸¶¨µ½·Ö²æ½Úµã¼´¿É£¬²»Ò»¶¨ÒªÖ¸¶¨µ½¸ù½Úµã¡£Èç¹ûÎÞ·¨Çå³þpath,¿ÉÒÔÍ¨¹ýµ÷ÊÔÊôÐÔÖ¸¶¨£¬ÒÔ²é¿´Êµ¼ÊµÄpath¡£Ê¾Àý£º"value"£º"&body.message_body.body_length",ÔòÊÇÖ¸ÆäÖµÊÇ°´Â·¾¶²éÕÒ²¢¶ÁÈ¡body_lengthµÄÖµ¡£µ±Ç°½ÚµãÒ»¶¨ÊÇbody_lengthºóµÄ½Úµã¡£Ê¹ÓÃÂ·¾¶µÄºÃ´¦ÊÇ£¬ÄãËùÒª²Ù×÷µÄ½Úµã£¬ÎÞÐè½øÐÐÈÎºÎÖ¸¶¨¡£ÄãÖ»ÒªÔÚÒª²Ù×÷µÄµØ·½Ö±½Ó¸ø³öÂ·¾¶Ñ¡ÔñÆ÷¼´¿É¡£
 µ«ÊÇ£¬Èç¹ûÒª¶ÁÈ¡µÄ½ÚµãÊÇrepeat½ÚµãÖÐµÄ·ÖÖ§£¬ÄÇÃ´£¬½ÚµãµÄnameÊÇÖØ¸´µÄ£¬Í¬Ê±£¬¼´Ê¹ÄãÖ¸¶¨id£¬µ«ÒòÊÇrepeat£¬ÔòidÒ²»á³öÏÖÖØ¸´¡£Í¬Ñù£¬×îÖÕÉú³ÉµÄ½Úµã£¬½ÚµãÃûÊÇÒÔ½ÚµãµÄindexÀ´ÃüÃûµÄ£¬ËùÒÔ£¬pathÑ¡ÔñÆ÷Ò»ÑùÒ²²»¿ÉÓÃ¡£ÕâÊ±£¬ÐèÒªÍ¨¹ýË÷Òý£¨index£©Ñ¡ÔñÆ÷À´»ñÈ¡ÕâÒ»Àà½Úµã¡£¡£
@@ -350,16 +374,16 @@ sdds schemaÖÐ²ÉÓÃÒÔÏÂÈýÖÖ·½Ê½½øÐÐ²ÎÊý´«µÝ¡£
 "$" Ë÷Òý£¨index£©Ñ¡ÔñÆ÷£¬±»²Ù×÷µÄ½ÚµãÐèÒªÍ¨¹ýselectorÖ¸¶¨Îªindex.ÀýÈç£º,"selector"£º"index"£¬¶øÁíÒ»½ÚµãÖÐ£¬ÔòÊÇ"value"£º"$item_length"£¬´ËÀýÔòÊÇÖ¸¶¨²Ù×÷ÏàÍ¬index×Ó½ÚµãÖÐµÄitem_length×Ó½Úµã¡£ÕâÒ»×Ó½ÚµãÖÐ¿Ï¶¨ÓÐ"selector"£º"index"ÕâÒ»Ö¸¶¨¡£
     
 "*" º¯ÊýÑ¡ÔñÆ÷£¬µ÷ÓÃÔÚÀ©Õ¹£¨¼Ì³ÐÀà£©ÖÐÊµÏÖµÄ×Ô¶¨Òåº¯Êý¡£
-ÈÎÒ»ÊôÐÔÖµÖÐ£¬Èç¹ûµÚÒ»¸ö×Ö·ûÊÇÒÔÉÏµÄÑ¡ÔñÆ÷×Ö·û£¬sdds½«»áµ÷ÓÃÑ¡ÔñÆ÷³ÌÐò¶ÁÈ¡Êý¾Ý¡£ËùÒÔ£¬Èç¹û¿ªÍ·ÊÇÒÔÉÏÑ¡ÔñÆ÷×Ö·û£¬ÔòÒªÊ¹ÓÃ×ªÒå¡£±ÈÈç£º"\#","\$"¡£Ò»µ©Ê¹ÓÃ×ªÒå£¬ÔòÐèÒªÔÚÀ©Õ¹³ÌÐòÖÐ×öÏà¹Ø´¦Àí¡£sdds²»»á×Ô¶¯Çå³ý×ªÒå¡£
+ÈÎÒ»ÊôÐÔÖµÖÐ£¬Èç¹ûµÚÒ»¸ö×Ö·ûÊÇÒÔÉÏµÄÑ¡ÔñÆ÷×Ö·û£¬SDDS½«»áµ÷ÓÃÑ¡ÔñÆ÷³ÌÐò¶ÁÈ¡Êý¾Ý¡£ËùÒÔ£¬Èç¹û¿ªÍ·ÊÇÒÔÉÏÑ¡ÔñÆ÷×Ö·û£¬ÔòÒªÊ¹ÓÃ×ªÒå¡£±ÈÈç£º"\#","\$"¡£Ò»µ©Ê¹ÓÃ×ªÒå£¬ÔòÐèÒªÔÚÀ©Õ¹³ÌÐòÖÐ×öÏà¹Ø´¦Àí¡£SDDS²»»á×Ô¶¯Çå³ý×ªÒå¡£
     
 (2)ÊýÖµ´«µÝÊôÐÔ
     
 ÊýÖµ´«µÝÊôÐÔ¼´ÊÇÖ¸selectorÊôÐÔ¡£¼´Îª½ÚµãÖ¸¶¨Ò»ÖÖÑ¡ÔñÆ÷ÒÔÊ¹ºóÐø¿ÉÒÔ¶ÔËü²Ù×÷¡£selectorÓÐÁ½¸öÖµ£º"id"ºÍ"index"£¬Èç¹ûÊ¹ÓÃid,Ôò±ØÐë±£Ö¤ÔÚdecode»òencode·ÖÖ§ÏÂ´ËidÊÇÎ¨Ò»µÄ¡£¶ÔÓÚrepeatµÄ×Ó½Úµã¡£ÓÉÓÚ²»ÄÜÖ¸¶¨id,Ôò±ØÐëÖ¸¶¨selectorÎªindex¡£
 
 
-### sdds¹Ø¼ü×Ö£º
+### SDDS¹Ø¼ü×Ö£º
 
-sdds°üÀ¨ÒÔÏÂ¹Ø¼ü×Ö£¬¹¦ÄÜËµÃ÷ÈçÏÂ£º
+SDDS°üÀ¨ÒÔÏÂ¹Ø¼ü×Ö£¬¹¦ÄÜËµÃ÷ÈçÏÂ£º
 
 (1)±ê×¼Í¨ÓÃ¹Ø¼ü×Ö£º
     
@@ -369,7 +393,7 @@ comment£ºstring ×¢ÊÍ£¬ÓÃÓÚ·½±ãÎÄµµÔÄ¶ÁÓë³ÌÐòµ÷ÊÔÊ±Ê¹ÓÃ¡£³ÌÐò²»´¦Àí´Ëattribute¡£
     
 meta£ºjson,ÔªÊý¾Ý½Úµã£¬ÎªÎÄµµÌá¹©×¢ÊÍÓëËµÃ÷µÄ½Úµã£¬²»½øÐÐÊý¾Ý½âÎö¡£
     
-options£ºjson,Ö¸¶¨Ò»¸öÅäÖÃ½Úµã¡£sdds´ÓÖÐ¶ÁÈ¡ÅäÖÃÊý¾Ý¡£
+options£ºjson,Ö¸¶¨Ò»¸öÅäÖÃ½Úµã¡£SDDS´ÓÖÐ¶ÁÈ¡ÅäÖÃÊý¾Ý¡£
     
 sdds£ºjson,Ö¸¶¨Êý¾Ý½á¹¹µÄ½ÚµãÁÐ±í¡£
  
@@ -385,7 +409,7 @@ bit_fields£º json Ö¸¶¨½Úµã°üÀ¨µÄ×Ó½Úµã£¬¼´×Ö¶Î£¬ÆäÊý¾ÝÀàÐÍÊÇÒÔÎ»(bit)¶ÁÐ´µÄ»ù±¾À
     
 (3.2)Êý¾ÝÀàÐÍÊôÐÔ¹Ø¼ü×Ö
     
-type£ºstring  Êý¾ÝÀàÐÍ£¬¿ÉÒÔÊÇÉÏÊöµÄ»ù±¾Êý¾ÝÀàÐÍ£¬Èç¹û»ù±¾Êý¾ÝÀàÐÍ£¬Ôò»áÊ¹ÓÃ×Ô¶¨ÒåÃû³Æ£¬²¢ÇÒ´ËÃû³ÆÒ»¶¨»áÔÚsddsÖÐÓÐ¶ÔÓ¦¶¨ÒåµÄ½Úµã¡£
+type£ºstring  Êý¾ÝÀàÐÍ£¬¿ÉÒÔÊÇÉÏÊöµÄ»ù±¾Êý¾ÝÀàÐÍ£¬Èç¹û»ù±¾Êý¾ÝÀàÐÍ£¬Ôò»áÊ¹ÓÃ×Ô¶¨ÒåÃû³Æ£¬²¢ÇÒ´ËÃû³ÆÒ»¶¨»áÔÚSDDSÖÐÓÐ¶ÔÓ¦¶¨ÒåµÄ½Úµã¡£
     
 position£ºint ×Ö½Ú»òÎ»µÄ¿ªÊ¼¶¨Î»¡£Èç¹ûÊÇµ±Ç°µ½µ¹ÊýµÚ¼¸Î»µÄÎ»ÖÃ£¬ÔòÌîÓë¸ºÊý¡£´ËÊôÐÔ²»ÊÇ±ØÐëµÄ£¬³ÌÐòÍ¨³£²»»á´¦ÀíËü¡£µ«Ëü¿ÉÒÔ°ïÖúÎÒÃÇÔÚ±àÐ´SchemaÊ±Ð£¶Ô¡£
     
@@ -407,13 +431,13 @@ name£ºstring ±äÁ¿Ãû£¬ÓÃÓÚ³ÌÐòÖÐÊ¹ÓÃ£¬»òÊý¾Ý¿âÖÐµÄ×Ö¶Î¶ÔÓ¦¡£½âÂëÊ±£¬³ÌÐò²»»á·µ»ØÎ
     
 (3.5)³ÌÐòÐÐÎªÊôÐÔ¹Ø¼ü×Ö£º
     
-repeat£ºbool ÓÃÒÔÉùÃ÷£¬´ËÀàÐÍÊý¾ÝÊÇ·ñÓÐÁ¬Ðø¶àÏî¡£
-    
-one_of£ºjson ÓÃÓÚÍ¨¹ýkeyÑ¡ÔñÄ³¸ö×ÓÀàÐÍ¡£
-    
-key£ºjson ÓÃÓÚone_ofÖ¸¶¨µÄ¼ìË÷Ìõ¼þ¡£
-    
-list£ºjson ÓÃÓÚone_ofµÄÁÐ±í¶¨Òå
+- repeat£ºbool ÓÃÒÔÉùÃ÷£¬´ËÀàÐÍÊý¾ÝÊÇ·ñÓÐÁ¬Ðø¶àÏî¡£
+-     
+- one_of£ºjson ÓÃÓÚÍ¨¹ýkeyÑ¡ÔñÄ³¸ö×ÓÀàÐÍ¡£
+-     
+- key£ºjson ÓÃÓÚone_ofÖ¸¶¨µÄ¼ìË÷Ìõ¼þ¡£
+-     
+- list£ºjson ÓÃÓÚone_ofµÄÁÐ±í¶¨Òå
 
 (3.6)Ô¤´¦ÀíÓëºó´¦ÀíÊôÐÔ¹Ø¼ü×Ö£º
     
@@ -433,25 +457,25 @@ id: ÓÃÓÚºóÐøÍ¨¹ý´Ëid»ñÈ¡ÊýÖµµÄid£¬ÈÎÒ»ÊôÐÔ£¬Èç¹ûÆäÖµÒÔ#¿ªÍ·£¬ÔòÊÇÒª¶ÁÈ¡¶ÔÓ¦id½Úµ
     
 (3.7)Êý¾Ý¸ñÊ½´¦Àí¹Ø¼ü×Ö£º
     
-format£ºstring Êý¾Ý¸ñÊ½Ö¸¶¨£¨½öÓÃÓÚone_ofÖÐÊ¹ÓÃµÄËÑË÷¹Ø¼ü×ÖkeyµÄ¶¨ÒåÖÐ£©
+- format£ºstring Êý¾Ý¸ñÊ½Ö¸¶¨£¨½öÓÃÓÚone_ofÖÐÊ¹ÓÃµÄËÑË÷¹Ø¼ü×ÖkeyµÄ¶¨ÒåÖÐ£©
     
-formula£ºstring ±àÂë¡¢½âÂë¹«Ê½£¬ÔÚdecode·ÖÖ§£¬¼´ÊÇ½âÂë¹«Ê½£¬¶øencode·ÖÖ§ÖÐ£¬ÔòÊÇ½âÂë¹«Ê½¡£¹«Ê½ÖÐµÄ±äÁ¿£¬ÊÇ½ÚµãÖÐµÄValue£¬±äÁ¿ÃûÎª"A"
+- formula£ºstring ±àÂë¡¢½âÂë¹«Ê½£¬ÔÚdecode·ÖÖ§£¬¼´ÊÇ½âÂë¹«Ê½£¬¶øencode·ÖÖ§ÖÐ£¬ÔòÊÇ½âÂë¹«Ê½¡£¹«Ê½ÖÐµÄ±äÁ¿£¬ÊÇ½ÚµãÖÐµÄValue£¬±äÁ¿ÃûÎª"A"
      
 (3.8)µ÷ÊÔ¹Ø¼ü×Ö£º
     
-debug£ºbool,µ±ÎªtrueÊ±£¬»áÔÚµ±Ç°½ÚµãÖÐ¶Ï£¬²¢´òÓ¡³öµ±Ç°¶Á³ö/Ð´ÈëµÄÊý¾Ý¡£
+- debug£ºbool,µ±ÎªtrueÊ±£¬»áÔÚµ±Ç°½ÚµãÖÐ¶Ï£¬²¢´òÓ¡³öµ±Ç°¶Á³ö/Ð´ÈëµÄÊý¾Ý¡£
     
-trace£º string ¿ÉÒÔÂ¼ÈëÐèÒªµ÷ÊÔ²é¿´µÄµ±Ç°½ÚµãµÄÊôÐÔ£¬ÓÃ¶ººÅ·Ö¸ô£¬»áÓÉ³ÌÐòÖ¸¶¨µÄ·½Ê½Êä³ö£¬optionsÖÐdebugÎªtrueÊ±£¬»áÍ¨¹ýweb»ò¿ØÖÆÌ¨·½Ê½Êä³ö¡£·ñÔò£¬Ð´Èëµ½ÈÕÖ¾ÎÄ¼þ¡£
+- trace£º string ¿ÉÒÔÂ¼ÈëÐèÒªµ÷ÊÔ²é¿´µÄµ±Ç°½ÚµãµÄÊôÐÔ£¬ÓÃ¶ººÅ·Ö¸ô£¬»áÓÉ³ÌÐòÖ¸¶¨µÄ·½Ê½Êä³ö£¬optionsÖÐdebugÎªtrueÊ±£¬»áÍ¨¹ýweb»ò¿ØÖÆÌ¨·½Ê½Êä³ö¡£·ñÔò£¬Ð´Èëµ½ÈÕÖ¾ÎÄ¼þ¡£
     
-ignore_errors£ºÖ¸¶¨´Ë½ÚµãºöÂÔ´íÎó¡£Ä¬ÈÏÎªfalse¡£ÎªtrueÊ±£¬Òì³£½«²»»áÅ×³ö¡£³ý·Ç±ØÐë£¬¾¡Á¿ÉÙ×öÕâÀàÖ¸¶¨£¬ÒòÎª£¬Õâ»á¸øµ÷ÊÔ´øÀ´Âé·³¡£
+- ignore_errors£ºÖ¸¶¨´Ë½ÚµãºöÂÔ´íÎó¡£Ä¬ÈÏÎªfalse¡£ÎªtrueÊ±£¬Òì³£½«²»»áÅ×³ö¡£³ý·Ç±ØÐë£¬¾¡Á¿ÉÙ×öÕâÀàÖ¸¶¨£¬ÒòÎª£¬Õâ»á¸øµ÷ÊÔ´øÀ´Âé·³¡£
     
 ### ³£¼ûÎÊÌâ£º
     
-1¡¢sddsÒýÇæÊÇ·ñ¿ÉÒÔ×öÊý¾Ý°üÓÐÐ§ÐÔÑéÖ¤£¿
+1¡¢SDDSÒýÇæÊÇ·ñ¿ÉÒÔ×öÊý¾Ý°üÓÐÐ§ÐÔÑéÖ¤£¿
     
-sddsÒýÇæ²»×öÊý¾Ý°üµÄÓÐÐ§ÐÔÑéÖ¤¡£ÕâÒ»²¿·Ö±ØÐëÔÚsddsÒýÇæÖ®ÍâÍê³É¡£ÕâÑù¿ÉÒÔÊÊºÏ²»Í¬µÄÍ¨Ñ¶Ð­Òé¡£µ«ÈôÐèÒªsddsÒýÇæÔÚÑéÖ¤Ç°¶Á³öÏà¹ØÊý¾Ý½á¹¹£¬Ôò¿ÉÒÔÔÚsddsÒýÇæÖÐ¶¨Òåvalidate½Úµã½øÐÐ¶ÁÈ¡¡£
+SDDSÒýÇæ²»×öÊý¾Ý°üµÄÓÐÐ§ÐÔÑéÖ¤¡£ÕâÒ»²¿·Ö±ØÐëÔÚSDDSÒýÇæÖ®ÍâÍê³É¡£ÕâÑù¿ÉÒÔÊÊºÏ²»Í¬µÄÍ¨Ñ¶Ð­Òé¡£µ«ÈôÐèÒªSDDSÒýÇæÔÚÑéÖ¤Ç°¶Á³öÏà¹ØÊý¾Ý½á¹¹£¬Ôò¿ÉÒÔÔÚSDDSÒýÇæÖÐ¶¨Òåvalidate½Úµã½øÐÐ¶ÁÈ¡¡£
     
-2¡¢sddsÒýÇæÎ´¶Á³öÊý¾Ý£¬»òÎ´Ð´ÈëÊý¾Ý¡£µ«ÎÞÈÎºÎ´íÎó»òÒì³£¡£
+2¡¢SDDSÒýÇæÎ´¶Á³öÊý¾Ý£¬»òÎ´Ð´ÈëÊý¾Ý¡£µ«ÎÞÈÎºÎ´íÎó»òÒì³£¡£
     
 ÕâÊÇÒòÎª£¬È±ÉÙnameÊôÐÔ¡£Ìí¼ÓnameÊôÐÔ£¬¼´¿É½â¾ö¡£
     
@@ -459,24 +483,24 @@ sddsÒýÇæ²»×öÊý¾Ý°üµÄÓÐÐ§ÐÔÑéÖ¤¡£ÕâÒ»²¿·Ö±ØÐëÔÚsddsÒýÇæÖ®ÍâÍê³É¡£ÕâÑù¿ÉÒÔÊÊºÏ²»Í¬
     
 Ö»ÒªschemaÖÐ£¬¶¨Òå¸¸½ÚµãÊÇrepeat£¬×Ó½ÚµãÊ¹ÓÃone_of¼´¿É¡£
     
-4¡¢attributeºÍpropertyÇø±ðÊÇÊ²Ã´£¿attributeºÍproperty¶¼¿É³ÆÎªÊôÐÔ¡£µ«ÊÇ£¬attributeÊÇËùÓÐ¿ÉÒÔÔÚschemaÖÐ¶¨ÒåµÄ×Ö¶Î¡£¶øpropertyÔòÊÇsddsÒýÇæÖÐÊ¹ÓÃµÄÊôÐÔ¡£ÎÒÃÇÒ»ÑùÒªÁË½âproperty£¬ÒòÎª³ÌÐòÐèÒª¶ÔËü½øÐÐ²Ù×÷¡£±¾¹æ·¶Ô¼¶¨£ºËùÓÐproperty¾ùÒÔ"_"¿ªÍ·¡£
+4¡¢attributeºÍpropertyÇø±ðÊÇÊ²Ã´£¿attributeºÍproperty¶¼¿É³ÆÎªÊôÐÔ¡£µ«ÊÇ£¬attributeÊÇËùÓÐ¿ÉÒÔÔÚschemaÖÐ¶¨ÒåµÄ×Ö¶Î¡£¶øpropertyÔòÊÇSDDSÒýÇæÖÐÊ¹ÓÃµÄÊôÐÔ¡£ÎÒÃÇÒ»ÑùÒªÁË½âproperty£¬ÒòÎª³ÌÐòÐèÒª¶ÔËü½øÐÐ²Ù×÷¡£±¾¹æ·¶Ô¼¶¨£ºËùÓÐproperty¾ùÒÔ"_"¿ªÍ·¡£
     
-5¡¢sddsÖÐÃ»ÓÐifÌõ¼þ£¬ÈçºÎ´¦Àí£¿
+5¡¢SDDSÖÐÃ»ÓÐifÌõ¼þ£¬ÈçºÎ´¦Àí£¿
     
-sddsÖÐ²»ÐèÒªifÌõ¼þ£¬ÕâÑùµÄÐèÇó¿ÉÒÔÍ¨¹ýone_of½Úµã½á¹¹À´ÊµÏÖ¡£
+SDDSÖÐ²»ÐèÒªifÌõ¼þ£¬ÕâÑùµÄÐèÇó¿ÉÒÔÍ¨¹ýone_of½Úµã½á¹¹À´ÊµÏÖ¡£
     
 6¡¢Ñ¡ÔñÆ÷ÊÇ²»ÊÇÖ»ÄÜËÑË÷±¾½ÚµãÇ°µÄÒÑ¼ÓÔØµÄ½Úµã£¿Î´¼ÓÔØµÄÈçºÎ´¦Àí£¿
     
 ÊÇµÄ£¬Ñ¡ÔñÆ÷Ö»ÄÜËÑË÷ÒÑ´æÔÚµÄ½Úµã¡£Òª´¦ÀíÎ´¼ÓÔØµÄ½Úµã£¬²»ÒªÔÚÇ°ÃæµÄ½ÚµãÖÐ´¦ÀíºóÃæµÄ½Úµã£¬¶øÊÇÔÚºóÃæµÄ½ÚµãÖÐ¶ÁÐ´Ç°ÃæµÄ½Úµã¡£
       
-### sdds attributesË÷Òý
+### SDDS attributesË÷Òý
    
 index of attributes of sdds node
   
 | ÊôÐÔÃû	| Êý¾ÝÀàÐÍ |  ËµÃ÷ |
 |---------------|-----------|----------|   
-| after_change | string | ¶¨Òå¶ÁÐ´²Ù×÷ºóµ÷ÓÃµÄ×Ô¶¨Òåº¯Êý£¬¶ººÅ·Ö¸ô 
-| before_change | string | ¶¨Òå¶ÁÐ´²Ù×÷Ç°µ÷ÓÃµÄ×Ô¶¨Òåº¯Êý£¬¶ººÅ·Ö¸ô
+| after_action | string | ¶¨Òå¶ÁÐ´²Ù×÷ºóµ÷ÓÃµÄ×Ô¶¨Òåº¯Êý£¬¶ººÅ·Ö¸ô 
+| before_action | string | ¶¨Òå¶ÁÐ´²Ù×÷Ç°µ÷ÓÃµÄ×Ô¶¨Òåº¯Êý£¬¶ººÅ·Ö¸ô
 | bit_fields | json | ¶¨ÒåÎ»¶ÁÐ´µÄ·ÖÖ§½Úµã
 | byte_fields | json |¶¨Òå×Ö½Ú¶ÁÐ´µÄ·ÖÖ§½Úµã
 | comment | string |  ½Úµã»òschemaµÄÎÄ×Ö×¢½â¡£
@@ -497,7 +521,7 @@ index of attributes of sdds node
 | required | bool |Ö¸Ã÷ÒªÐ´ÈëµÄÖµÊÇ·ñÎª±ØÐë¡£
 | selector | string | ¶¨Òåµ±Ç°½ÚµãµÄÑ¡ÔñÆ÷¡£¼´Í¨¹ýid»¹ÊÇindex¿ÉÒÔ·ÃÎÊ¡£
 | trace | string |  ¶¨Òåµ±Ç°½ÚµãµÄµ÷ÊÔ¸ú×Ù£¬¿ÉÒÔÓÃ¶ººÅ·Ö¸ôÒªtraceµÄsttribut¡£
-| type | string | ¶¨Òåµ±Ç°½ÚµãµÄÊý¾ÝÀàÐÍ¡£Èç¹ûÊÇ×Ô¶¨ÒåÀàÐÎ£¬ÔòÔÚsddsµÄdecode»òencodeÏÂ±ØÐëÓÐÒªÍ¬Ãû½Úµã¡£
+| type | string | ¶¨Òåµ±Ç°½ÚµãµÄÊý¾ÝÀàÐÍ¡£Èç¹ûÊÇ×Ô¶¨ÒåÀàÐÎ£¬ÔòÔÚSDDSµÄdecode»òencodeÏÂ±ØÐëÓÐÒªÍ¬Ãû½Úµã¡£
 | unsigned | string | ¶¨Òåµ±Ç°½ÚµãµÄÊý¾ÝÊÇ·ñÎªÎÞ·ûºÅ¡£
 | until | string | ¶¨ÒåÖØ¸´½ÚµãµÄÖØ¸´Ìõ¼þº¯Êý¡£
 | value | mixed | µ±Ç°½ÚµãµÄÖµ£¬¿ÉÒÔÊÇ¶ÁÈ¡µÄ£¬Ò²¿ÉÒÔÊÇÐ´ÈëµÄ¡£mixedÎª¸´ºÏÀàÐÍ£¬¼´¿ÉÄÜÎª²»Í¬µÄÀàÐÍ¡£

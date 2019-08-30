@@ -1,110 +1,131 @@
-﻿# Sdds Specification 1.0 beta
-## Sdds Specification1.0 beta
+﻿# SDDS Specification 1.0 beta
+## SDDS Specification1.0 beta
     
-Copyright： Sdds project 2018
+Copyright： SDDS project 2018
     
 License： GNU GPL
     
 ### Summary：
     
-#### What is sdds？
+#### What is SDDS？
     
-Sdds is a short word of "stream data dynamic structure". sdds is a dsl(domain-specific language). Sdds is used to describe the structure of the binary stream data in a programmer-readable and program-understandable manner, thereby enabling reading and writing of the binary stream data with the simple program. This article describes the structure of sdds and the features that the sdds engine program needs to support.
+SDDS is a short word of "stream data dynamic structure". SDDS is a dsl(domain-specific language). SDDS is used to describe the structure of the binary stream data in a programmer-readable and program-understandable manner, thereby enabling reading and writing of the binary stream data with the simple program. This article describes the structure of SDDS and the features that the SDDS engine program needs to support.
     
-#### Why sdds？
+#### Why SDDS？
     
 In data stream-based communication, or any other processing of binary data streams, we do not have an efficient way to read and write data. Usually, we have to write different programs to read and write the different binary data streams.  
     
-The goal of sdds is to use a unified encoding and decoding engine program based sdds to quickly encode and decode binary data streams with minimal partial extension.
+The goal of SDDS is to use a unified encoding and decoding engine program based SDDS to quickly encode and decode binary data streams with minimal partial extension.
     
-Sdds is dedicated to the coding and decoding of application layer network communication protocols for binary data streams, and strives to simplify communication development. 
+SDDS is dedicated to the coding and decoding of application layer network communication protocols for binary data streams, and strives to simplify communication development. 
     
-The goal of sdds is: simple, easy to use, fast and efficient.
+The goal of SDDS is: simple, easy to use, fast and efficient.
     
-###  The format of Sdds document definition:
+###  The format of SDDS document definition:
     
-The definition of sdds, wihich we named sdds schema. The sdds schema is the file that encodes and decodes the data stream. These instructions parse the data through the sdds engine. That is, it is a dynamic data structure based on a communication protocol or document data format.
+The definition of SDDS, wihich we named SDDS schema. The SDDS schema is the file that encodes and decodes the data stream. These instructions parse the data through the SDDS engine. That is, it is a dynamic data structure based on a communication protocol or document data format.
     
-The schema definition of sdds uses the json format to facilitate syntax checking with the relevant IDE when writing the schema.
+The schema definition of SDDS uses the json format to facilitate syntax checking with the relevant IDE when writing the schema.
     
-Keywords in the sdds schema are completely lowercase, and connections between words are underlined.
+Keywords in the SDDS schema are completely lowercase, and connections between words are underlined.
    
-### Sdds data type
+### SDDS data type
     
 #### Basic data type:
     
-Sdds currently supports the following basic data types:
+SDDS currently supports the following basic data types:
     
     (1) Integer type:
        
-Int8: integer type, an integer of 1 byte (8 bits) in length.
-Int16: integer type, an integer of 2 bytes (16 bits) in length.
-Int24: integer type, an integer of 3 bytes (24 bits) in length.
-Int32: integer type, an integer of 4 bytes (32 bits) in length.
-Int64: integer type, an integer of 8 bytes (64 bits) in length.
+- Int8: integer type, an integer of 1 byte (8 bits) in length.
+  
+- Int16: integer type, an integer of 2 bytes (16 bits) in length.
+  
+- Int24: integer type, an integer of 3 bytes (24 bits) in length.
+  
+- Int32: integer type, an integer of 4 bytes (32 bits) in length.
+  
+- Int64: integer type, an integer of 8 bytes (64 bits) in length.
     
 All of the above types support signed and unsigned. And the default is signed, if unsigned, the unsigned attribute should be specified as true.
     
     (2) Aliases of integer type:
       
-Bool: Boolean type saved by int8, which is 1 byte in the byte field and 1 bit in the bit field. The values are 0 and 1.
-Char: An alias of type int8.
-Byte: An alias of type int8.
-Short: An alias of type int16.
-Word: An alias of type int16.
-Dword: An alias for the int32 type.
-Int: An alias for the int32 type.
-Long: An alias of type int64.
+- Bool: Boolean type saved by int8, which is 1 byte in the byte field and 1 bit in the bit field. The values are 0 and 1.
+  
+- Char: An alias of type int8.
+  
+- Byte: An alias of type int8.
+  
+- Short: An alias of type int16.
+  
+- Word: An alias of type int16.
+  
+- Dword: An alias for the int32 type.
+  
+- Int: An alias for the int32 type.
+  
+- Long: An alias of type int64.
     
    (3) Float type:
     
-Float32: The number of points, the number of points in length of 4 bytes (32 bits).
-Float64: The number of points, 8 bytes (64 bits), the number of points.
-
+- Float32: The number of points, the number of points in length of 4 bytes (32 bits).
+  
+- Float64: The number of points, 8 bytes (64 bits), the number of points.
+  
     (4) Aliases of float type :
    
-Single: An alias for the float32 type.
-Double: An alias for type float64.
+- Single: An alias for the float32 type.
+  
+- Double: An alias for type float64.
 
     (5) Other basic data types:
    
-Bytes: byte type, read the byte of the specified length byte.
-Bit: bit type.
-Bits: Reads the bits of the specified length.
-String: Reads the specified length, specifying the string of the charset.
-Bcd8421: bcd code based on the 8421 algorithm.
-Hex: hex string type
+- Bytes: byte type, read the byte of the specified length byte.
+  
+- Bit: bit type.
+  
+- Bits: Reads the bits of the specified length.
+  
+- String: Reads the specified length, specifying the string of the charset.
+  
+- Bcd8421: bcd code based on the 8421 algorithm.
+  
+- Hex: hex string type
     
-Note: All data types have an endianness distinction(Big-endian, Little-endian). Can be specified through the options node in Sdds schema.
+Note: All data types have an endianness distinction(Big-endian, Little-endian). Can be specified through the options node in SDDS schema.
      
-The sdds engine not only supports read, but also write, insert, and replace.
+The SDDS engine not only supports read, but also write, insert, and replace.
     
-In the sdds node, the data types are specified by the following two attributes: data_type and unsinged.
+In the SDDS node, the data types are specified by the following two attributes: data_type and unsinged.
     
 Endianness is specified in the options node. If there are individual nodes that are inconsistent with the actual endianness, you need to implement them through a custom function.
     
 #### Data type extension
     
-In addition to the basic data types described above, the sdds engine supports the extending for unsupported data types. The extensions are: custom types combined by basic data types. Cf the attributes byte_fields and bit_fields.
+In addition to the basic data types described above, the SDDS engine supports the extending for unsupported data types. The extensions are: custom types combined by basic data types. Cf the attributes byte_fields and bit_fields.
     
 It is also possible to read the bytes by the basic type bytes, and then specify the extension function implementation through attributes such as format, formula, and after_action.
    
-### Node structure of Sdds schema:
+### Node structure of SDDS schema:
    
 #### Schema structure
   
-Note: Any sdds schema includes the 3 branch nodes: the format is as follows:
+Note: Any SDDS schema includes the 3 branch nodes: the format is as follows:
 ```
 {
 "meta"：{},
 "options"：{},
-"sdds"：{}
+"SDDS"：{}
 }
 ```
 among them:
-Meta: Metadata used to describe information about this sdds schema. The sdds engine does not process this node.
-Options: global program run parameters configured for the sdds engine
-Sdds: sdds schema body.
+  
+Meta: Metadata used to describe information about this SDDS schema. The SDDS engine does not process this node.
+  
+Options: global program run parameters configured for the SDDS engine
+  
+sdds: SDDS schema body.
 
 #### Meta node structure
      
@@ -150,7 +171,7 @@ debug: bool, specifies whether it is debug state. When this property is turned o
     
 top_node：string. Specifies from which node the program starts parsing. Usually, if not specified, the program will either be the 'document' under decode or encode, or the 'message' node. Once you find it, start with it.
     '
-#### Sdds node structure
+#### SDDS node structure
     
 ```
     "sdds": {
@@ -163,7 +184,7 @@ top_node：string. Specifies from which node the program starts parsing. Usually
     }
 ```
     
-Usually sdds has two branch nodes:
+Usually SDDS has two branch nodes:
    
 Decode:json specifies the node is a branch for decoding; But if it is pure decoding or encoding, that is, there is only a single function, you can not use this branch. 
   
@@ -203,7 +224,7 @@ The above nodes actually define the correspondence between a certain segment of 
     
 "id"：The ID of the node must be unique within the entire schema.
     
-"type"：The data type, in addition to the above basic types, can also be any name, but this name must have a corresponding node in the sdds branch, which is a custom type.
+"type"：The data type, in addition to the above basic types, can also be any name, but this name must have a corresponding node in the SDDS branch, which is a custom type.
     
 "unsigned"：false,Whether the variable is an unsigned type, this property is only valid for integer types, and the default is signed, ie "unsigned": false, you can not write.
     
@@ -219,7 +240,7 @@ The above nodes actually define the correspondence between a certain segment of 
     
  (2) A node of a custom type.
     
-A node of a custom type is the same as a primitive data type node, except the type is the name of a node in sdds. That is, sdds uses nodes to implement custom types. E.g:
+A node of a custom type is the same as a primitive data type node, except the type is the name of a node in SDDS. That is, SDDS uses nodes to implement custom types. E.g:
     
 ```    
 "node_name"：{
@@ -235,7 +256,7 @@ A node of a custom type is the same as a primitive data type node, except the ty
 }
 ```
     
-Then there must be a node named message_header in the decode and encode branch nodes of sdds or in the sdds.
+Then there must be a node named message_header in the decode and encode branch nodes of SDDS or in the SDDS.
     
 (3) Node with branches:
     
@@ -262,7 +283,7 @@ They are as follows:
 ```
 Unlike basic data type nodes, many attributes in a node are not required. At the same time, there must be branch nodes in byte_fields and bit_fields. And the byte_fields branch can be any type of node. The branch in bit_fields can only be the basic data type node.
     
-In general, the top-level node must be a node with a byte_fields branch. Because the sdds engine does not actively traverse the branches of sdds in order, but the top-level node specifies the process.
+In general, the top-level node must be a node with a byte_fields branch. Because the SDDS engine does not actively traverse the branches of SDDS in order, but the top-level node specifies the process.
     
 For example, the structure of a message node might look like this:
     
@@ -350,27 +371,27 @@ A multi-select node is a composite node. The outer layer is a repeating node and
 
 ### Parameter passing
     
-There are 2 ways to pass parameters in the sdds schema.
+There are 2 ways to pass parameters in the SDDS schema.
     
 (1) Value transfer selector
     
-"#" Id selector: The id selector specifies to read the value of the node with some id. Note that the id should be unique within the same sdds file. If not unique, you should use a different selector. Example: "value": "#body_length" means that the value is read from the node with id of body_length. The current node must be the node after body_length. Therefore, there must be another node with the attribute "id": "body_length".
+"#" Id selector: The id selector specifies to read the value of the node with some id. Note that the id should be unique within the same SDDS file. If not unique, you should use a different selector. Example: "value": "#body_length" means that the value is read from the node with id of body_length. The current node must be the node after body_length. Therefore, there must be another node with the attribute "id": "body_length".
     
 "@"： Path selector: A path selector that specifies the value of a node to be read through a path. Note: The path is searched up first, after searching for the same node, then searching down. Therefore, the path can be specified only to the fork node, not necessarily to the root node. If the path is not clear, you can specify it by debugging properties to see the actual path. Example: "value":"&body.message_body.body_length" means that the value is to find and read the value of body_length by path. The current node must be the node after body_length. The advantage of using a path is that the node you want to operate does not need to be specified. You just need to give the path selector directly where you want to operate.
 However, if the node to be read is a branch in the repeat node, then the name of the node is repeat. At the same time, even if you specify the id, the id will be repeat because it is repeat. Similarly, the final generated node, the node name is named after the node's index, so the path selector is not available. At this time, you need to get this type of node through the index selector.
     
 "$" Index selector The node to be operated needs to be specified as index by selector. For example: "selector": "index", and in another node, it is "value": "$item_length", in this case Specifies to operate the item_length child node in the same index child node. There must be a "selector" in this child node: "index".
     
-"*" Function selector The function selector calls a custom function implemented in an extension (inherited class).In any attribute value, if the first character is the above selector character, sdds will call the selector program to read the data. Therefore, if the start of the above selector character, then use the escape. For example: "\#", "\$". Once escaping is used, it needs to be processed in the extension. Sdds does not automatically clear escaping.
+"*" Function selector The function selector calls a custom function implemented in an extension (inherited class).In any attribute value, if the first character is the above selector character, SDDS will call the selector program to read the data. Therefore, if the start of the above selector character, then use the escape. For example: "\#", "\$". Once escaping is used, it needs to be processed in the extension. SDDS does not automatically clear escaping.
     
 (2) The attributes of the value passing
     
 The numeric pass attribute is the selector attribute. That is, the node is assigned a selector so that it can operate on it later. The selector has two values: "id" and "index". If you use id, you must ensure that this id is unique under the decode or encode branch. For the child nodes of repeat. Since the id cannot be specified, the selector must be specified as index.
 
 
-### Sdds preserved keywords
+### SDDS preserved keywords
 
-Sdds includes the following keywords, the features' description is as follows:
+SDDS includes the following keywords, the features' description is as follows:
 
 (1) Standard universal keywords:
     
@@ -380,9 +401,9 @@ comment: string, comment for use in document reading and program debugging. The 
     
 meta:json, the metadata node, the node that provides comments and descriptions for the document, without data parsing.
     
-options:json, specifies a configuration node. Sdds reads the configuration data from it.
+options:json, specifies a configuration node. SDDS reads the configuration data from it.
     
-sdds:json, specifies the list of nodes for the data structure.
+SDDS:json, specifies the list of nodes for the data structure.
   
 (3) node attribute keyword:
 
@@ -396,7 +417,7 @@ bit_fields: json. Specifies the child nodes that the node includes, that is, fie
     
 (3.2) keywords od data type attribute 
     
-Type: string. The data type, which can be the basic data type above. If the basic data type, a custom name is used, and this name must have a corresponding defined node in sdds.
+Type: string. The data type, which can be the basic data type above. If the basic data type, a custom name is used, and this name must have a corresponding defined node in SDDS.
     
 Position: int. The starting position of the byte or bit. If it is the current position to the last digit, fill in the negative number. This property is not required and the program will usually not process it. But it can help us proofread when writing a schema.
     
@@ -458,11 +479,11 @@ Ignore_errors: Specifies that this node ignores errors. The default is false. Wh
     
 ### FAQ:
     
-1. Q: Can the sdds engine perform packet validity verification?
+1. Q: Can the SDDS engine perform packet validity verification?
     
-A: The sdds engine does not verify the validity of the packet. This part must be done outside of the sdds engine. This can be adapted to different communication protocols. However, if the sdds engine is required to read the relevant data structure before verification, the validate node can be defined in the sdds engine for reading.
+A: The SDDS engine does not verify the validity of the packet. This part must be done outside of the SDDS engine. This can be adapted to different communication protocols. However, if the SDDS engine is required to read the relevant data structure before verification, the validate node can be defined in the SDDS engine for reading.
     
-2. Q: The sdds engine has not read data or has not written data. But there are no errors or exceptions.
+2. Q: The SDDS engine has not read data or has not written data. But there are no errors or exceptions.
     
 A: This is because the name attribute is missing. Add the name attribute to solve.
     
@@ -472,19 +493,19 @@ A: As long as the schema is defined as the repeat, the child node can use one_of
     
 4. Q: What is the difference between attribute and property?
   
-A: Both attribute and property can be called attributes. However, attribute is all the fields that can be defined in the schema. The property is the property used in the sdds engine. We also need to understand the property, because the program needs to operate on it. This specification states that all properties begin with "_".
+A: Both attribute and property can be called attributes. However, attribute is all the fields that can be defined in the schema. The property is the property used in the SDDS engine. We also need to understand the property, because the program needs to operate on it. This specification states that all properties begin with "_".
     
-5, Q: There is no if condition in sdds, how to deal with it?
+5, Q: There is no if condition in SDDS, how to deal with it?
     
-A: The if condition is not needed in sdds. Such a requirement can be implemented by the one_of node structure.
+A: The if condition is not needed in SDDS. Such a requirement can be implemented by the one_of node structure.
     
 6. Q: Can the selector only search for the loaded node before the node? What to do if it is not loaded?
     
 A: Yes, the selector can only search for existing nodes. To handle unloaded nodes, do not process the following nodes in the previous node, but read and write the previous nodes in the following nodes.
       
-### Index of sdds attributes
+### Index of SDDS attributes
    
-index of attributes of sdds node
+index of attributes of SDDS node
   
 | Attribute Name | Data Type | Description |
 |---------------|-----------|----------|   
@@ -510,7 +531,7 @@ index of attributes of sdds node
 | required | bool | Indicates if the value to be written is required. |
 | selector | string | Defines the selector for the current node. That is, it can be accessed by id or index. |
 | trace | string | Defines the debug trace for the current node, which can be separated by commas. |
-| type | string | Defines the data type of the current node. If it is a custom type, there must be a node with the same name under the decode or encode of sdds. |
+| type | string | Defines the data type of the current node. If it is a custom type, there must be a node with the same name under the decode or encode of SDDS. |
 | unsigned | string | Defines whether the data of the current node is unsigned. |
 | until | string | Defines the repeat condition function for a repeating node. |
 | value | mixed | The value of the current node, either read or written. Mixed is a composite type, which may be a different type. |
